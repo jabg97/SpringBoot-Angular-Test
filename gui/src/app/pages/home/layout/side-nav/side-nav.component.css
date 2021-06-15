@@ -1,0 +1,41 @@
+mat-icon::selection {
+  color: none;
+  background: none;
+}
+
+.item mat-icon {
+  color: #3F51B5;
+}
+.item-title{
+cursor: default !important;
+transition:0.5s;
+}
+.item-title h3{
+  font-weight: 500;
+}
+
+.item {
+  letter-spacing: 0px;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 21px;
+  height: 48px !important;
+    transition:0.5s;
+}
+
+.item:active, .item:hover{
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+}
+
+.item:active p, .item:hover p{
+  font-weight: 500;
+}
+
+.item:active mat-icon, .item:hover mat-icon{
+  color: #F44336;
+}
+
+p::selection {
+  color: none;
+  background: none;
+}

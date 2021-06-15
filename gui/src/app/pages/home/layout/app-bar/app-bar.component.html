@@ -1,0 +1,23 @@
+<mat-toolbar color="primary" class="example-toolbar" *ngIf="visible || !BP.isXS">
+  <button mat-icon-button (click)="navService.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <img [routerLink]="['']" class="ml-lg-3 h-50 mr-1 link" src="../../../assets/logo.png" alt="" />
+  <p [routerLink]="['']" class="link bar-title">{{_api.getNombre}}</p>
+  <span [routerLink]="['']" matBadge="V1" matBadgeColor="warn" matBadgeSize="small" matBadgeOverlap="false"
+    class="mb-3 mr-3 link"></span>
+
+
+  <div class="float-right">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+
+<mat-menu #menu="matMenu" class="menu">
+  <button (click)="logout()" mat-menu-item>
+    <mat-icon>exit_to_app</mat-icon>
+    <span>Cerrar Sesión</span>
+  </button>
+</mat-menu>

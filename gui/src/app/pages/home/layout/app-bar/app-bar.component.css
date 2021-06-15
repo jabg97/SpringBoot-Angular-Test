@@ -1,0 +1,19 @@
+.float-right{
+  position: fixed;
+  right: 15px;
+}
+.link {
+  cursor: pointer;
+}
+.bar-title{
+  margin: 0px;
+  margin-left: 5px;
+}
+
+.example-toolbar img {
+  max-height: 40px;
+  margin-left: 15px;
+}
+span.link {
+  margin-bottom: 12px;
+}

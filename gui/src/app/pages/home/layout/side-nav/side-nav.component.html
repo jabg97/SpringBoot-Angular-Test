@@ -1,0 +1,13 @@
+<mat-nav-list class="dashboard">
+  <a mat-list-item class="item-title">
+    <h3 matLine *ngIf="navService.isOpen">Profesores</h3>
+  </a>
+  <mat-divider *ngIf="navService.isOpen"></mat-divider>
+  <a mat-list-item class="item" *ngFor="let profesor of profesores" (click)="cargar_asignaturas(profesor.id,profesor.nombre)">
+    <mat-icon mat-list-icon>account_circle</mat-icon><p matLine *ngIf="navService.isOpen">{{profesor.nombre}}</p>
+  </a>
+
+  <mat-divider *ngIf="navService.isOpen"></mat-divider>
+
+
+</mat-nav-list>

@@ -1,0 +1,34 @@
+<div class="row no-gutters">
+  <div class="col-12" *ngIf="asignaturas && asignaturas.length > 0">
+    <p class="title">
+     Asignaturas de <span>{{ asignaturas[0].profesor.nombre }}</span></p>
+  <mat-card >
+    <table wt-responsive-table>
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Curso</th>
+        <th>Ver Estudiantes</th>
+    </tr>
+  </thead>
+    <tbody>
+    <tr *ngFor="let asignatura of asignaturas; index as i">
+        <td>{{asignatura.nombre}}</td>
+        <td>{{asignatura.curso.grado}}{{asignatura.curso.salon}}</td>
+        <td> <button mat-mini-fab color="primary" aria-label="Ver Estudiantes" (click)="get_estudiantes(i)">
+          <mat-icon  mat-list-icon>groups</mat-icon></button></td>
+    </tr>
+  </tbody>
+</table>
+</mat-card>
+</div>
+<div class="col-12" *ngIf="!asignaturas || asignaturas.length <= 0">
+  <p class="title">
+    Seleccione un Profesor en el menu.</p>
+</div>
+<ngx-spinner
+  bdColor="rgba(0,0,0,0.5)"
+  size="large"
+  color="#fff"
+  type="pacman"
+></ngx-spinner>

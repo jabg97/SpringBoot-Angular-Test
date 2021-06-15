@@ -1,0 +1,24 @@
+<h2 mat-dialog-title class="top">Estudiantes Curso <span>{{data.curso}}</span></h2>
+
+<mat-dialog-content>
+  <mat-nav-list class="dashboard">
+    <a mat-list-item class="item-title">
+      <h3 matLine>Estudiantes</h3>
+    </a>
+    <mat-divider></mat-divider>
+    <a mat-list-item class="item" *ngFor="let estudiante of data.estudiantes">
+      <mat-icon mat-list-icon>school</mat-icon><p matLine>{{estudiante.nombre}}</p>
+    </a>
+  
+    <mat-divider></mat-divider>
+  
+  
+  </mat-nav-list>
+  
+ 
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-mini-fab color="warn" aria-label="Cerrar" (click)="close()">
+      <mat-icon>close</mat-icon></button>
+</mat-dialog-actions>
